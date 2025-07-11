@@ -39,6 +39,7 @@ p {
   padding: 50px 0px;
   background-color: black;
   color: white;
+  grid-area: banner;
 }
 
 .banner h1 {
@@ -50,9 +51,11 @@ p {
   text-align: center;
   padding: 0px 50px;
 }
+
 .button-web {
   margin: 15px 0px;
 }
+
 .button {
   background-color: black;
   padding: 10px 20px;
@@ -78,6 +81,19 @@ p {
   font-weight: 700;
 }
 
+.icon-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-blocks img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -96,10 +112,6 @@ footer {
     "mis-proyectos-inicio portafolio-inicio";
   grid-template-rows: 200px;
   gap: 30px;
-}
-
-.banner {
-  grid-area: banner;
 }
 
 .historia-inicio {
@@ -176,7 +188,7 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     "banner banner banner banner"
-    "img-services img-services img-services img-services"
+    "img-section img-section img-section img-section"
     "que-puedo-ofrecer-services que-puedo-ofrecer-services que-puedo-ofrecer-services que-puedo-ofrecer-services"
     "icon-service-one icon-service-two icon-service-three icon-service-four"
     "lo-que-estoy-aprendiendo-services lo-que-estoy-aprendiendo-services lo-que-estoy-aprendiendo-services lo-que-estoy-aprendiendo-services"
@@ -185,10 +197,11 @@ footer {
   gap: 10px;
 }
 
-.img-services {
-  grid-area: img-services;
+.img-section {
+  grid-area: img-section;
 }
-.img-services img {
+
+.img-section img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -211,19 +224,6 @@ footer {
 }
 .icon-service-four {
   grid-area: icon-service-four;
-}
-
-.icons-services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.icons-services img {
-  width: 50px;
-  height: 50px;
-  margin: 0 10px;
 }
 
 .lo-que-estoy-aprendiendo-services {
@@ -252,20 +252,13 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "banner banner banner"
-    "img-portfolio img-portfolio img-portfolio"
+    "img-section img-section img-section"
     "proyectos-en-wordpress-porfolio proyectos-en-wordpress-porfolio proyectos-en-wordpress-porfolio"
     "portfolio-one portfolio-two portfolio-three";
   gap: 10px;
   margin-bottom: 50px;
 }
-.img-portfolio {
-  grid-area: img-portfolio;
-}
-.img-portfolio img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
 .proyectos-en-wordpress-porfolio {
   grid-area: proyectos-en-wordpress-porfolio;
   text-align: center;
@@ -291,35 +284,22 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     "banner banner banner banner"
-    "img-contact img-contact img-contact img-contact"
+    "img-section img-section img-section img-section"
     "info-contact info-contact info-contact info-contact"
     "icon-whatsapp-contact icon-mobile-contact icon-instagram-contact icon-linkedin-contact"
     "contact-form contact-form contact-form contact-form";
   gap: 20px;
 }
 
-.img-contact {
-  grid-area: img-contact;
+.img-section {
+  grid-area: img-section;
 }
-.img-contact img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
 .info-contact {
   grid-area: info-contact;
   text-align: center;
 }
-.icons-contact img {
-  width: 50px;
-  height: 50px;
-}
-.icons-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+
 .icon-whatsapp-contact {
   grid-area: icon-whatsapp-contact;
 }
@@ -426,26 +406,12 @@ footer {
     height: auto;
     object-fit: cover;
   }
-  .banner-sobre-mi {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px 10px;
-    background-color: black;
-    color: white;
-  }
-
-  .banner-sobre-mi h1 {
-    color: #fbff79;
-    margin-bottom: 20px;
-  }
   /*Página Servicios*/
   .main-services {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "banner banner"
-      "img-services img-services"
+      "img-section img-section"
       "que-puedo-ofrecer-services que-puedo-ofrecer-services"
       "icon-service-one icon-service-two"
       "icon-service-three icon-service-four"
@@ -480,7 +446,7 @@ footer {
     grid-template-columns: 1fr;
     grid-template-areas:
       "banner"
-      "img-portfolio"
+      "img-section"
       "proyectos-en-wordpress-porfolio"
       "portfolio-one"
       "portfolio-two"
@@ -490,7 +456,7 @@ footer {
   .portfolio-list {
     margin-bottom: 40px;
   }
-  .img-portfolio img {
+  .img-section img {
     height: 200px;
   }
 }
