@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ANIMATE -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Boostrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -64,7 +71,7 @@
     </header>
     <main class="main main-portfolio">
       <section class="banner">
-        <h1>PORTAFOLIO</h1>
+        <h1 class="animate__animated animate__backInDown">PORTAFOLIO</h1>
         <p>
           Aquí comparto algunos de los proyectos en los que he trabajado, tanto
           con WordPress como parte de mi experiencia profesional, como también
@@ -81,7 +88,7 @@
         </p>
       </section>
       <section class="card-container-ed">
-        <div class="card-ed card-one">
+        <div data-aos="fade-down-right" class="card-ed card-one">
           <img src="../assets/img/Ecommerce.jpg" alt="" />
           <h4>Tienda online con WooCommerce</h4>
           <p>
@@ -89,7 +96,7 @@
             clientes.
           </p>
         </div>
-        <div class="card-ed card-two">
+        <div data-aos="fade-up" class="card-ed card-two">
           <img src="../assets/img/webConvencional.jpg" alt="" />
           <h4>Web Informativa</h4>
           <p>
@@ -97,7 +104,7 @@
             cliente lo que necesita
           </p>
         </div>
-        <div class="card-ed card-three">
+        <div data-aos="fade-up-left" class="card-ed card-three">
           <img src="../assets/img/LangingPage.jpg" alt="" />
           <h4>Landing Page</h4>
           <p>
@@ -117,5 +124,10 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ANIMATE -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Boostrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -64,7 +71,7 @@
     </header>
     <main class="main main-servicios">
       <section class="banner">
-        <h1>SERVICIOS</h1>
+        <h1 class="animate__animated animate__backInRight">SERVICIOS</h1>
         <p>
           En esta sección te cuento los servicios que ya ofrezco como
           profesional del desarrollo web en WordPress, y también aquellos que
@@ -85,19 +92,19 @@
           </p>
         </article>
       </section>
-      <figure class="icon-blocks icon-service-one">
+      <figure data-aos="flip-left" class="icon-blocks icon-service-one">
         <img src="../assets/icons/Logo-Wordpress.png" alt="" />
         <p>Sitios web con Wordpress</p>
       </figure>
-      <figure class="icon-blocks icon-service-two">
+      <figure data-aos="flip-left" class="icon-blocks icon-service-two">
         <img src="../assets/icons/Icono-SEO.png" alt="" />
         <p>Optimización SEO básico</p>
       </figure>
-      <figure class="icon-blocks icon-service-three">
+      <figure data-aos="flip-left" class="icon-blocks icon-service-three">
         <img src="../assets/icons/Icono-Responsive.png" alt="" />
         <p>Diseño Responsive</p>
       </figure>
-      <figure class="icon-blocks icon-service-four">
+      <figure data-aos="flip-left" class="icon-blocks icon-service-four">
         <img src="../assets/icons/icono-capacitacion.png" alt="" />
         <p>Capacitación para gestionar el sitio web</p>
       </figure>
@@ -133,5 +140,10 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
