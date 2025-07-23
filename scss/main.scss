@@ -1,0 +1,17 @@
+//BASE
+@use "./partials/base/reset";
+@use "./partials/base/tipografia";
+//COMPONENTES
+@use "./partials/components/footer";
+@use "./partials/components/general";
+@use "./partials/components/cards";
+@use "./partials/components/buttons";
+@use "./partials/components/banner";
+@use "./partials/components/icons";
+//LAYOUTS
+@use "./partials/layouts/grid";
+@use "./partials/layouts/pages/inicio";
+@use "./partials/layouts/pages/sobreMi";
+@use "./partials/layouts/pages/servicios";
+@use "./partials/layouts/pages/portafolio";
+@use "./partials/layouts/pages/contacto";

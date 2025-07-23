@@ -1,0 +1,37 @@
+@use "../utilities/variables";
+.button {
+  background-color: black;
+  color: variables.$color-ed;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: variables.$sombra-botones;
+
+  &:hover {
+    background-color: variables.$color-ed;
+    color: black;
+  }
+  font-weight: 600;
+}
+
+.button-portafolio {
+  @extend .button;
+  background-color: variables.$color-ed;
+  color: black;
+  &:hover {
+    background-color: black;
+    color: variables.$color-ed;
+  }
+}
+
+.btn-color-propio {
+  background-color: black;
+  color: variables.$color-ed;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: variables.$color-ed;
+    color: black;
+  }
+}

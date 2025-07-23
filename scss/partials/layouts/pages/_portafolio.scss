@@ -1,0 +1,31 @@
+@use "../../utilities/mixins";
+@use "../../utilities/variables";
+.main-portfolio {
+  grid-template-areas:
+    "banner banner banner banner"
+    "img-section img-section img-section img-section"
+    "proyectos-en-wordpress-porfolio proyectos-en-wordpress-porfolio proyectos-en-wordpress-porfolio proyectos-en-wordpress-porfolio"
+    "card-container-ed card-container-ed card-container-ed card-container-ed";
+  .proyectos-en-wordpress-porfolio {
+    grid-area: proyectos-en-wordpress-porfolio;
+    text-align: center;
+    margin: 50px 0px 40px 0px;
+  }
+  .portfolio-list {
+    margin: 0px 30px;
+    text-align: center;
+  }
+  .card-container-ed {
+    grid-area: card-container-ed;
+  }
+
+  @include mixins.grid-mobile(1, auto, 20px) {
+    grid-template-areas:
+      "banner"
+      "img-section"
+      "proyectos-en-wordpress-porfolio"
+      "card-container-ed"
+      "card-container-ed"
+      "card-container-ed";
+  }
+}

@@ -1,0 +1,12 @@
+@use "../utilities/mixins";
+.main {
+  @include mixins.grid(4, 200px, 10px);
+}
+.img-section {
+  grid-area: img-section;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

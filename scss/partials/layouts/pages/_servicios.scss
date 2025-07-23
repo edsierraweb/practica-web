@@ -1,0 +1,68 @@
+@use "../../utilities/mixins";
+.main-servicios {
+  grid-template-areas:
+    "banner banner banner banner"
+    "img-section img-section img-section img-section"
+    "que-puedo-ofrecer-services que-puedo-ofrecer-services que-puedo-ofrecer-services que-puedo-ofrecer-services"
+    "icon-service-one icon-service-two icon-service-three icon-service-four"
+    "lo-que-estoy-aprendiendo-services lo-que-estoy-aprendiendo-services lo-que-estoy-aprendiendo-services lo-que-estoy-aprendiendo-services"
+    "lo-que-viene-services lo-que-viene-services lo-que-viene-services lo-que-viene-services";
+  .img-section {
+    grid-area: img-section;
+  }
+  .img-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .que-puedo-ofrecer-services {
+    grid-area: que-puedo-ofrecer-services;
+    margin: 20 80px;
+    text-align: center;
+  }
+
+  .icon-service-one {
+    grid-area: icon-service-one;
+  }
+  .icon-service-two {
+    grid-area: icon-service-two;
+  }
+  .icon-service-three {
+    grid-area: icon-service-three;
+  }
+  .icon-service-four {
+    grid-area: icon-service-four;
+  }
+  .lo-que-estoy-aprendiendo-services {
+    grid-area: lo-que-estoy-aprendiendo-services;
+    margin: 20px 80px;
+    text-align: center;
+  }
+  .lo-que-viene-services {
+    grid-area: lo-que-viene-services;
+    margin: 20px 0px;
+    text-align: center;
+  }
+  .lo-que-viene-services p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .lo-que-viene-services img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  @include mixins.grid-mobile(2, auto, 20px) {
+    grid-template-areas:
+      "banner banner"
+      "img-section img-section"
+      "que-puedo-ofrecer-services que-puedo-ofrecer-services"
+      "icon-service-one icon-service-two"
+      "icon-service-three icon-service-four"
+      "lo-que-estoy-aprendiendo-services lo-que-estoy-aprendiendo-services"
+      "lo-que-viene-services lo-que-viene-services";
+    .lo-que-estoy-aprendiendo-services {
+      margin: 20px 20px;
+    }
+  }
+}

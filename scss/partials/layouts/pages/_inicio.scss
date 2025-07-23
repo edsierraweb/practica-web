@@ -1,0 +1,50 @@
+@use "../../utilities/mixins";
+
+.main-inicio {
+  grid-template-areas:
+    "banner banner banner banner"
+    "historia-inicio historia-inicio historia-inicio historia-inicio"
+    "mis-proyectos-inicio mis-proyectos-inicio portafolio-inicio portafolio-inicio";
+  .historia-inicio {
+    grid-area: historia-inicio;
+    @include mixins.flex-row-center;
+    gap: 20px;
+    margin: 0 20px;
+  }
+  .mis-proyectos-inicio {
+    grid-area: mis-proyectos-inicio;
+    margin-left: 20px;
+  }
+  .portafolio-inicio {
+    grid-area: portafolio-inicio;
+    margin-right: 20px;
+  }
+
+  @include mixins.grid-mobile(1, auto, 10px) {
+    grid-template-areas:
+      "banner"
+      "historia-inicio"
+      "mis-proyectos-inicio"
+      "portafolio-inicio";
+
+    .historia-inicio {
+      @include mixins.flex-column-center;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .mis-proyectos-inicio {
+      margin-left: 0px;
+      img {
+        @include mixins.img-mobile;
+      }
+    }
+    .portafolio-inicio {
+      margin-right: 0px;
+      img {
+        @include mixins.img-mobile;
+      }
+    }
+  }
+}

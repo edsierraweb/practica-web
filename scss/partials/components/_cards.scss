@@ -1,0 +1,22 @@
+@use "../utilities/mixins";
+@use "../utilities/variables";
+.card-container-ed {
+  @include mixins.flex(row, space-between, center);
+  @media (max-width: 430px) {
+    @include mixins.flex-column-center;
+  }
+}
+
+.card-ed {
+  text-align: center;
+  width: 400px;
+  padding: 10px 30px;
+  box-shadow: variables.$sombra-tarjetas;
+  border-radius: 15px;
+
+  h4 {
+    margin: 8px 0;
+    font-size: 25px;
+    font-weight: 700;
+  }
+}

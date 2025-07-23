@@ -1,0 +1,72 @@
+@use "../../utilities/mixins";
+.main-sobre-mi {
+  grid-template-areas:
+    "banner banner banner banner"
+    "img-sobre-mi img-sobre-mi img-sobre-mi img-sobre-mi"
+    "quien-soy-sobre-mi quien-soy-sobre-mi mis-intereses-sobre-mi mis-intereses-sobre-mi"
+    "mis-metas-sobre-mi mis-metas-sobre-mi mis-metas-sobre-mi mis-metas-sobre-mi"
+    "conclusion-sobre-mi conclusion-sobre-mi conclusion-sobre-mi conclusion-sobre-mi";
+
+  .img-sobre-mi {
+    grid-area: img-sobre-mi;
+    @include mixins.flex-row-center;
+    img {
+      width: 600px;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+  .quien-soy-sobre-mi {
+    grid-area: quien-soy-sobre-mi;
+    margin: 0 80px;
+  }
+  .mis-intereses-sobre-mi {
+    grid-area: mis-intereses-sobre-mi;
+    margin: 0 80px;
+  }
+  .mis-metas-sobre-mi {
+    grid-area: mis-metas-sobre-mi;
+    margin: 0 80px;
+    @include mixins.flex-column-center;
+    text-align: center;
+    gap: 10px;
+  }
+  .mis-metas-sobre-mi img {
+    width: 1400px;
+    object-fit: cover;
+  }
+  .conclusion-sobre-mi {
+    grid-area: conclusion-sobre-mi;
+    margin: 0 80px;
+    @include mixins.flex-column-center;
+    gap: 40px;
+  }
+  @include mixins.grid-mobile(1, auto, 10px) {
+    grid-template-areas:
+      "banner"
+      "img-sobre-mi"
+      "quien-soy-sobre-mi"
+      "mis-intereses-sobre-mi"
+      "mis-metas-sobre-mi"
+      "conclusion-sobre-mi";
+    .img-sobre-mi img {
+      width: auto;
+      height: 150px;
+    }
+    .quien-soy-sobre-mi {
+      margin: 0px;
+    }
+    .mis-intereses-sobre-mi {
+      margin: 0px;
+    }
+    .mis-metas-sobre-mi {
+      margin: 0px;
+      img {
+        @include mixins.img-mobile;
+      }
+    }
+    .conclusion-sobre-mi {
+      margin: 0px;
+    }
+  }
+}

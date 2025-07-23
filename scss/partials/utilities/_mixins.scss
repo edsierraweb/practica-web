@@ -1,0 +1,48 @@
+@use "../utilities/variables";
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid($columns, $row-size, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: $row-size;
+  gap: $gap;
+}
+
+@mixin grid-mobile($columns, $row-size, $gap: 0) {
+  @media (max-width: variables.$breakpoint-mobile) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: $row-size;
+    gap: $gap;
+    margin: 0 10px;
+    text-align: center;
+    @content;
+  }
+}
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin img-mobile {
+  @media (max-width: variables.$breakpoint-mobile) {
+    width: 100%;
+    height: auto;
+  }
+}
