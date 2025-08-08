@@ -1,6 +1,6 @@
 @use "../utilities/mixins";
 @use "../utilities/variables";
 .icon-blocks {
-  @include mixins.flex-column-center;
+  @include mixins.flex-center;
   box-shadow: variables.$sombra-tarjetas;
 }

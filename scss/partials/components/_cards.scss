@@ -3,7 +3,7 @@
 .card-container-ed {
   @include mixins.flex(row, space-between, center);
   @media (max-width: 430px) {
-    @include mixins.flex-column-center;
+    @include mixins.flex-center;
   }
 }
 

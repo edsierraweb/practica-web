@@ -9,7 +9,7 @@
 
   .img-sobre-mi {
     grid-area: img-sobre-mi;
-    @include mixins.flex-row-center;
+    @include mixins.flex-center;
     img {
       width: 600px;
       height: 200px;
@@ -27,7 +27,7 @@
   .mis-metas-sobre-mi {
     grid-area: mis-metas-sobre-mi;
     margin: 0 80px;
-    @include mixins.flex-column-center;
+    @include mixins.flex-center(column);
     text-align: center;
     gap: 10px;
   }
@@ -38,7 +38,7 @@
   .conclusion-sobre-mi {
     grid-area: conclusion-sobre-mi;
     margin: 0 80px;
-    @include mixins.flex-column-center;
+    @include mixins.flex-center(column);
     gap: 40px;
   }
   @include mixins.grid-mobile(1, auto, 10px) {

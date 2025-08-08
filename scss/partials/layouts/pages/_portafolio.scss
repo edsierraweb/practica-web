@@ -27,5 +27,9 @@
       "card-container-ed"
       "card-container-ed"
       "card-container-ed";
+
+    .card-container-ed {
+      @include mixins.flex-center(column);
+    }
   }
 }

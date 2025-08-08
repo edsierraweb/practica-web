@@ -11,7 +11,7 @@
     text-align: center;
   }
   .icon-blocks {
-    @include mixins.flex-row-center;
+    @include mixins.flex-center;
   }
   .icon-whatsapp-contact {
     grid-area: icon-whatsapp-contact;

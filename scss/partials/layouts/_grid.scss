@@ -1,5 +1,5 @@
 @use "../utilities/mixins";
-.main {
+main {
   @include mixins.grid(4, 200px, 10px);
 }
 .img-section {
